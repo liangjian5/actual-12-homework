@@ -6,7 +6,7 @@ login_method = raw_input('Please select the login method:(name,id): ')
 user_list = []
 pwd_list = []
 id_list = []
-#遍历arr数组,将用户密码ID等追加到单独的数组中
+#遍历文件每行内容,将用户密码ID等追加到单独的数组中
 for i in sf:
     temp =  i.split(':')
     user_list.append(temp[1])
