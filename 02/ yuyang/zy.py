@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 import os 
 import sys
+import time
 
 # **********************
 
@@ -35,13 +36,15 @@ def Findfile():
     else:
         print ''
         print "Sorry, I cannot find the '%s' file" %filename
-        print "" 
+        print "..."
+        os.system('sleep 1')
         Prompt = raw_input('Do you want to create a filename yuayng.txt.YES/NO:')
         if Prompt == 'yes' or Prompt == 'YES':
             TouchFile()
-            print
+            os.system('sleep 1')
+            print '.....'
             print 'Ok touch yuyang.txt Success!!!!'
-            print ''
+            os.system('sleep 1')
         else:
             print 'Good Bey  ~~~~'
             sys.exit()
@@ -58,6 +61,8 @@ def WinFindfile():
         if Prompt == 'yes' or Prompt == 'YES':
             WINTouchFile()
             print ''
+            print '....'
+            time.sleep(1)
             print 'Ok touch yuyang.txt '
             print ''
         else:
@@ -68,7 +73,7 @@ def WinFindfile():
 def start():
     while True:  
         TXT="""
-        please must input 1~2!!!!! 
+        please must inpt 1~2!!!!! 
         1. linxu
         2. windows
 
@@ -95,25 +100,31 @@ def main():
    Filename.close()
    Space.pop() 
    User_list =Space[::]
+   print 'welcome~~~'
+   print ''
    print 'phone:user:password'
    print ''
    print User_list
    print ''
-   _Users = raw_input('please input Users$')
-   _Password = raw_input('please input Passwd$')
-   Bad = None
-   for Message in User_list:
-       New_list = Message.split(':')
-       if New_list[0] == _Users or New_list[1] == _Users:
-           if New_list[2] == _Password:
-               print 'success login %s' % New_list[0]
-               Bad = True
-           else:
-                Bad = True
-                print 'password  error!!! '
-   if not Bad:
-       print 'user not fonud'
-
+   shit = True
+   while shit == True:
+       _Users = raw_input('please input Users>')
+       _Password = raw_input('please input Passwd>')
+       Bad = None
+       for Message in User_list:
+           New_list = Message.split(':')
+           if New_list[0] == _Users or New_list[1] == _Users:
+               if New_list[2] == _Password:
+                   print 'success login %s' % New_list[0]
+                   Bad = True
+                   shit = False
+                   break
+               else:
+                    Bad = True
+                    print 'password  error!!! '
+       if not Bad:
+           print 'user not fonud'
+    
 if __name__=="__main__":
     main()
             
