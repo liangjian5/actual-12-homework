@@ -44,6 +44,8 @@ def Findfile():
             print ''
         else:
             print 'Good Bey  ~~~~'
+            sys.exit()
+            
 #Win查找文件是否存在不存在则创建
 def WinFindfile(): 
     filename = r'yuyang.txt'
@@ -60,12 +62,13 @@ def WinFindfile():
             print ''
         else:
             print 'Good Bey  ~~~~'
+            sys.exit()
 #上面都是没事练习玩的linux测试没问题 windows 如果不详
 
 def start():
     while True:  
         TXT="""
-        please input 1~2 
+        please must input 1~2!!!!! 
         1. linxu
         2. windows
 
