@@ -19,12 +19,15 @@ def TouchFile():
     os.system('echo "222:shell:1234567">>yuyang.txt')
     os.system('echo "333:perl:12345678">>yuyang.txt')
 
+
+
 #windows创建文件
 def WINTouchFile():
-    os.system('@echo > yuyang.txt')
-    os.system('@echo "111:python:123456">>yuyang.txt')
-    os.system('@echo "222:shell:1234567">>yuyang.txt')
-    os.system('@echo "333:perl:12345678">>yuyang.txt')
+
+    os.system('@echo 111:python:123456>>yuyang.txt')
+    os.system('@echo 222:shell:1234567>>yuyang.txt')
+    os.system('@echo 333:perl:12345678>>yuyang.txt')
+  
 
 #查找文件是否存在不存在则创建
 def Findfile(): 
