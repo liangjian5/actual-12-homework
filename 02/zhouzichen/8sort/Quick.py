@@ -20,7 +20,7 @@ def quick(L,left,right):
         #print L 
     #print L 
     #left = right 跳出循环
-    L[left] = key                             #------------------将key值赋给
+    L[left] = key                             #------------------将key值赋给left=right的位置
     #此时left=right,分别对左右子列表进行快速排序
     quick(L,low,right-1)
     quick(L,left+1,high)
