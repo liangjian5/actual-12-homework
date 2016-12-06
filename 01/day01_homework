@@ -1,7 +1,0 @@
-git init
-mkdir MaxLin
-echo  print 123 >> Day01_homework.py
-git add .
-git commit -m "day1"
-git remote add origin https://github.com/51reboot/actual-12-homework.git
-git push -u origin master
